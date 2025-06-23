@@ -4,6 +4,6 @@
         <p><b>"Push yourself, because no one else is going to do it for you."</b></p>
         <p><b>Contact us: glowgymcmc.com</b></p>
     </div>
-</div> <!-- close .wrapper -->
+</div> 
 </body>
 </html>
