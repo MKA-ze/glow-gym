@@ -12,16 +12,16 @@ $user_id = $_SESSION['user_id'];
 
 if (isset($_GET['book'])) {
     $class_id = intval($_GET['book']);
-    // Get total available_spots from class
+    
     $spots_res = $conn->query("SELECT available_spots FROM classes WHERE id = $class_id");
     if ($spots_row = $spots_res->fetch_assoc()) {
         $total_spots = $spots_row['available_spots'];
-        // How many have already booked
+
         $booked_res = $conn->query("SELECT COUNT(*) as booked FROM bookings WHERE class_id = $class_id");
         $booked = $booked_res->fetch_assoc()['booked'];
         $remaining_spots = $total_spots - $booked;
         if ($remaining_spots > 0) {
-            // Prevent double booking (user books same class twice)
+            
             $already = $conn->query("SELECT id FROM bookings WHERE user_id = $user_id AND class_id = $class_id");
             if ($already->num_rows == 0) {
                 $stmt = $conn->prepare("INSERT INTO bookings (user_id, class_id) VALUES (?, ?)");
