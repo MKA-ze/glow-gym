@@ -8,7 +8,6 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'admin') {
     exit();
 }
 
-// Handle cancel request
 if (isset($_POST['cancel_booking']) && isset($_POST['cancel_booking_id'])) {
     $booking_id = intval($_POST['cancel_booking_id']);
     $del = $conn->query("DELETE FROM bookings WHERE id = $booking_id");
@@ -20,7 +19,6 @@ if (isset($_POST['cancel_booking']) && isset($_POST['cancel_booking_id'])) {
     }
 }
 
-// Fetch all bookings
 $sql = "SELECT bookings.id, users.username, classes.title, classes.class_date, bookings.booking_date 
         FROM bookings
         JOIN users ON bookings.user_id = users.id
