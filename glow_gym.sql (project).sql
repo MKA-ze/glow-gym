@@ -1,4 +1,3 @@
-
 CREATE DATABASE IF NOT EXISTS glow_gym;
 USE glow_gym;
 
