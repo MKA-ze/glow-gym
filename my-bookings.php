@@ -10,7 +10,6 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'user') {
 
 $user_id = $_SESSION['user_id'];
 
-// Handle cancel action (POST)
 if (isset($_POST['cancel_booking']) && isset($_POST['cancel_booking_id'])) {
     $cancel_id = intval($_POST['cancel_booking_id']);
     $stmt = $conn->prepare("DELETE FROM bookings WHERE id = ? AND user_id = ?");
@@ -19,7 +18,6 @@ if (isset($_POST['cancel_booking']) && isset($_POST['cancel_booking_id'])) {
     echo "<p style='color:green;text-align:center;'>Booking cancelled.</p>";
 }
 
-// Query all the user's bookings, including class info
 $sql = "SELECT bookings.id, classes.title, classes.class_date, classes.description, classes.price
         FROM bookings 
         JOIN classes ON bookings.class_id = classes.id 
