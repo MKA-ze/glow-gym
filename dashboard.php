@@ -10,7 +10,6 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'user') {
 
 $user_id = $_SESSION['user_id'];
 
-// Handle booking
 if (isset($_GET['book'])) {
     $class_id = intval($_GET['book']);
     // Get total available_spots from class
@@ -49,7 +48,6 @@ while ($row = $res->fetch_assoc()) {
     $price = isset($row['price']) ? number_format($row['price'],2) : 'N/A';
     $total_spots = isset($row['available_spots']) ? $row['available_spots'] : 0;
 
-    // Calculate available spots
     $booked_res = $conn->query("SELECT COUNT(*) as booked FROM bookings WHERE class_id = $class_id");
     $booked = $booked_res->fetch_assoc()['booked'];
     $remaining_spots = $total_spots - $booked;
@@ -75,7 +73,6 @@ while ($row = $res->fetch_assoc()) {
 echo "</div>";
 
 echo "<div class='center'><a href='my-bookings.php' class='admin-btn'>My Bookings</a></div>";
-
 
 include 'includes/footer.php';
 ?>
