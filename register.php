@@ -1,14 +1,13 @@
 <?php
 include 'config/db.php';
 
-$registerMsg = ''; // Will hold our success or error message
+$registerMsg = ''; 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
     $email = $_POST['email'];
-    $password = md5($_POST['password']); // For production use password_hash()
+    $password = md5($_POST['password']); 
 
-    // Prepared statement to prevent SQL injection
     $stmt = $conn->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
     $stmt->bind_param("sss", $username, $email, $password);
 
@@ -28,7 +27,6 @@ include 'includes/header.php';
     <button type="submit">Register</button>
 </form>
 <?php
-// Show the message right below the form
 if (!empty($registerMsg)) {
     echo $registerMsg;
 }
