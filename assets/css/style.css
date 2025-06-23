@@ -1,0 +1,311 @@
+/* ========== Base & Layout ========== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff;
+    color: #5a2a57;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 { color: #000; text-align: center; }
+
+p { text-align: center; }
+
+/* ========== Header ========== */
+.header {
+    position: relative;
+    background: #ffe4ec;   /* Light pink */
+    padding: 32px 0 0px 0;
+    border-radius: 0 0 18px 18px;
+    box-shadow: 0 2px 10px rgba(255,182,193,0.12);
+    margin-bottom: 0;
+}
+.header hr {
+    border: 0;
+    height: 2px;
+    background: #f8c8dc;
+    margin: 1px 0 0 0;
+    width: 100%;
+}
+
+/* Header Links */
+.header-register-link,
+.logout-link,
+.login-link {
+    position: absolute;
+    bottom: 2px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1.1rem;
+    z-index: 99;
+    background: #fff0f5;
+    padding: 0 10px;
+    line-height: 1;
+    border-radius: 6px;
+    transition: color 0.18s, background 0.16s;
+}
+.header-register-link { right: 40px; }
+.logout-link { right: 150px; }
+.login-link {right:100px}
+
+.header-register-link:hover,
+.logout-link:hover,
+.login-link:hover {
+    text-decoration: underline;
+    color: #d63384;
+    background: #ffe4ec;
+}
+/* Back link (top left) */
+.back-link {
+    position: absolute;
+    bottom: 2px;
+    left: 40px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1.1rem;
+    z-index: 99;
+    background: #fff0f5;
+    padding: 0 10px;
+    line-height: 1;
+    border-radius: 6px;
+    transition: color 0.18s, background 0.16s;
+}
+.back-link:hover {
+    text-decoration: underline;
+    color: #d63384;
+    background: #ffe4ec;
+}
+
+/* ========== Footer ========== */
+.site-footer {
+    background: #ffe4ec;
+    border-top: 2px solid #f8c8dc;
+    border-radius: 18px 18px 0 0;
+    box-shadow: 0 -2px 10px rgba(255,182,193,0.10);
+    padding: 20px 0 8px 0;
+    text-align: center;
+    margin-top: 48px;
+}
+.site-footer b {
+    color: #010101;
+}
+.footer-extra {
+    display: block;
+    margin-top: 7px;
+    color: #5a2a57;
+    font-size: 0.98em;
+    letter-spacing: 0.04em;
+}
+.footer-email {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 3px;
+}
+.footer-email:hover {
+    text-decoration: underline;
+    color: #d63384;
+}
+
+/* ========== Forms ========== */
+form {
+    background: #fff;
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 2px solid #e8c8f8;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(214, 51, 132, 0.08);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #f8c8dc;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    background: #fff;
+    color: #5a2a57;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #ff69b4;
+    background: #fff8fb;
+}
+
+/* ========== Buttons (general, admin, form, etc.) ========== */
+button,
+input[type="submit"],
+.admin-btn,
+.user-btn {
+    background: #ff69b4;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(214,51,132,0.07);
+    transition: background 0.2s, transform 0.13s;
+    text-align: center;
+    display: block;
+    margin: 20px auto 0 auto;
+    text-decoration: none;
+    max-width: 220px;
+}
+button:hover,
+input[type="submit"]:hover,
+.admin-btn:hover,
+.user-btn:hover {
+    background: #e754a3;
+    transform: translateY(-2px) scale(1.04);
+}
+
+/* Admin button group vertical */
+.admin-btn-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    margin: 40px 0;
+}
+
+/* My Bookings (user) button style */
+.user-btn {
+    margin-top: 36px;
+}
+
+/* Book (green) button */
+.book-btn {
+    margin-top: 14px;
+    background: #09a009;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 28px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: background 0.2s;
+    display: inline-block;
+}
+.book-btn:hover { background: #067706; }
+
+/* Cancel (red) button */
+input.cancel-btn[type="submit"] {
+    background: #d33;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 28px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+input.cancel-btn[type="submit"]:hover { background: rgb(170, 0, 0); }
+
+/* ========== Lists ========== */
+ul {
+    list-style: none;
+    padding: 0 20px;
+    max-width: 420px;
+    margin: 30px auto 0 auto;
+}
+li {
+    margin-bottom: 10px;
+    background: #ffe4ec;
+    padding: 10px;
+    border-radius: 8px;
+    color: #5a2a57;
+}
+
+/* ========== Class Cards & Grids ========== */
+.class-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin: 24px 0;
+    justify-content: center;
+}
+.class-card {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    background: #ffe4ec;
+    width: 240px;
+    box-shadow: 0 2px 8px #ff69b4;
+    padding: 22px 18px 18px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 16px;
+}
+.class-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+    text-align: center;
+}
+.class-card p {
+    margin: 7px 0;
+    font-size: 1em;
+    text-align: center;
+}
+
+/* ========== Misc ========== */
+a {
+    color: #c71585;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover {
+    text-decoration: underline;
+    color: #d63384;
+}
+.full-msg {
+    margin-top: 14px;
+    color: #b00;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+.success-msg {
+    color: #128c36;
+    background: #e8faea;
+    border: 1px solid #8be0a5;
+    border-radius: 8px;
+    margin: 20px auto 0 auto;
+    max-width: 400px;
+    padding: 14px 18px;
+    text-align: center;
+    font-weight: bold;
+}
+.error-msg {
+    color: #b00;
+    background: #fff3f3;
+    border: 1px solid #e8b3b3;
+    border-radius: 8px;
+    margin: 20px auto 0 auto;
+    max-width: 400px;
+    padding: 14px 18px;
+    text-align: center;
+    font-weight: bold;
+}
+.center {
+    text-align: center;
+}
