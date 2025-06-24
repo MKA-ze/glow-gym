@@ -25,6 +25,7 @@
 <div class="wrapper">
     <div class="header">
         <h1>Glow Gym</h1>
+        <hr>
         <?php
         $currentFile = basename($_SERVER['PHP_SELF']);
 
