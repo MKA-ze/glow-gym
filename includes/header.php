@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8"> 
     <title>Glow Gym</title>
     <link rel="stylesheet" href="<?php echo (basename(dirname($_SERVER['PHP_SELF'])) === 'admin') ? '../' : ''; ?>assets/css/style.css">
     <style>
