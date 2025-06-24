@@ -27,8 +27,7 @@ p { text-align: center; }
 }
 
 .header-register-link,
-.logout-link,
-.login-link {
+.logout-link {
     position: absolute;
     bottom: 2px;
     font-weight: bold;
@@ -42,17 +41,17 @@ p { text-align: center; }
     border-radius: 6px;
     transition: color 0.18s, background 0.16s;
 }
+
 .header-register-link { right: 40px; }
 .logout-link { right: 150px; }
-.login-link {right:100px}
 
 .header-register-link:hover,
-.logout-link:hover,
-.login-link:hover {
+.logout-link:hover {
     text-decoration: underline;
     color: #d63384;
     background: #ffe4ec;
 }
+
 
 .back-link {
     position: absolute;
