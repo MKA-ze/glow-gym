@@ -26,15 +26,15 @@
         <h1>Glow Gym</h1>
         <?php
         $currentFile = basename($_SERVER['PHP_SELF']);
-        if ($currentFile !== 'index.php' && $currentFile !== 'login.php') {
+
+        if ($currentFile !== 'index.php') {
             echo '<a href="javascript:history.back()" class="back-link">Back</a>';
         }
+
         if ($currentFile === 'index.php') {
-            echo '<a href="login.php" class="login-link">Login</a>';
-            echo '<a href="register.php" class="header-register-link">Register here</a>';
-        } elseif ($currentFile === 'login.php') {
             echo '<a href="register.php" class="header-register-link">Register here</a>';
         }
+
         if (isset($_SESSION['user_id'])) {
             $logoutPath = (basename(dirname($_SERVER['PHP_SELF'])) === 'admin') ? '../logout.php' : 'logout.php';
             echo '<a href="' . $logoutPath . '" class="logout-link">Logout</a>';
