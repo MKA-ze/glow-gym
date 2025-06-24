@@ -74,7 +74,7 @@ p { text-align: center; }
     background: #ffe4ec;
 }
 
-.site-footer {
+.footer {
     background: #ffe4ec;
     border-top: 2px solid #f8c8dc;
     border-radius: 18px 18px 0 0;
@@ -83,7 +83,7 @@ p { text-align: center; }
     text-align: center;
     margin-top: 48px;
 }
-.site-footer b {
+.footer b {
     color: #010101;
 }
 
