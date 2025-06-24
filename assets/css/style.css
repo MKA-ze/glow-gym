@@ -55,7 +55,7 @@ p { text-align: center; }
 
 .back-link {
     position: absolute;
-    top: 2px;
+    bottom: 2px;
     left: 40px;
     font-weight: bold;
     text-decoration: none;
