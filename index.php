@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
         exit();
     } else {
-        echo "Invalid credentials.";
+       echo '<p class="error-msg">Invalid credentials.</p>';
     }
 }
 include 'includes/header.php';
