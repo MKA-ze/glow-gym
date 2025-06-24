@@ -103,7 +103,7 @@ input[type="email"],
 input[type="date"],
 input[type="number"],
 textarea {
-    width: 100%;
+    width: 95%;
     padding: 10px;
     border: 1px solid #f8c8dc;
     border-radius: 8px;
