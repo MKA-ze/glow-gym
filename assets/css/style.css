@@ -86,23 +86,6 @@ p { text-align: center; }
 .site-footer b {
     color: #010101;
 }
-.footer-extra {
-    display: block;
-    margin-top: 7px;
-    color: #5a2a57;
-    font-size: 0.98em;
-    letter-spacing: 0.04em;
-}
-.footer-email {
-    color: #007bff;
-    font-weight: bold;
-    text-decoration: none;
-    margin-left: 3px;
-}
-.footer-email:hover {
-    text-decoration: underline;
-    color: #d63384;
-}
 
 form {
     background: #fff;
