@@ -72,7 +72,7 @@ while ($row = $res->fetch_assoc()) {
 }
 echo "</div>";
 
-echo "<div class='center'><a href='my-bookings.php' class='admin-btn'>My Bookings</a></div>";
+echo "<div class='center'><a href='my-bookings.php' class='user-btn'>My Bookings</a></div>";
 
 include 'includes/footer.php';
 ?>
